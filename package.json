@@ -1,0 +1,27 @@
+{
+  "name": "brookzerker-slack-slash-command",
+  "version": "1.0.0",
+  "description": "Slack command server for Brookzerker app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrooksPatton/brookzerker-slack-slash-command.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrooksPatton/brookzerker-slack-slash-command/issues"
+  },
+  "homepage": "https://github.com/BrooksPatton/brookzerker-slack-slash-command#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2"
+  }
+}
