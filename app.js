@@ -8,6 +8,7 @@ const port = process.env.PORT
 app.use(morgan('combined'))
 
 app.post('/', (req, res, next) => {
+  console.log(req.body)
   res.send('got it!!!')
 })
 
