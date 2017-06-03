@@ -7,6 +7,10 @@ const port = process.env.PORT
 
 app.use(morgan('combined'))
 
+app.post('/', (req, res, next) => {
+  res.send('got it!!!')
+})
+
 app.listen(port, () => {
   console.info('Slack app running on port', port)
 })
