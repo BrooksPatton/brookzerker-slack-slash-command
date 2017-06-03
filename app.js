@@ -1,9 +1,7 @@
-require('dotenv').config()
 const express = require('express')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
 const app = express()
-const port = process.env.PORT
 
 app.use(morgan('combined'))
 // parse application/x-www-form-urlencoded
@@ -20,6 +18,4 @@ app.post('/', (req, res, next) => {
   })
 })
 
-app.listen(port, () => {
-  console.info('Slack app running on port', port)
-})
+module.exports = app
