@@ -14,7 +14,10 @@ app.use(bodyParser.json())
 
 app.post('/', (req, res, next) => {
   console.log(req.body)
-  res.send('got it!!!')
+  res.json({
+    "response_type": "in_channel",
+    text:'got it!!!'
+  })
 })
 
 app.listen(port, () => {
