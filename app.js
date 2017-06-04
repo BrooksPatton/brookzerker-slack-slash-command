@@ -28,4 +28,8 @@ app.post('/', (req, res, next) => {
   }
 })
 
+app.get('/', (req, res, next) => {
+  res.sendStatus(200)
+})
+
 module.exports = app
