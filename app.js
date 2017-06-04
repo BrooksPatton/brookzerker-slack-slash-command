@@ -23,7 +23,7 @@ app.post('/', (req, res, next) => {
   } else {
     res.json({
       response_type: 'ephemeral',
-      text: `Sorry, I couldn'nt understand you :cry:`
+      text: `Sorry, I couldn't understand you :cry:`
     })
   }
 })
