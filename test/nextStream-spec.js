@@ -33,7 +33,7 @@ describe('next stream command', () => {
       if(err) return done(err)
 
       res.body.response_type.should.equal('ephemeral')
-      res.body.text.should.equal(`Sorry, I couldn'nt understand you :cry:`)
+      res.body.text.should.equal(`Sorry, I couldn't understand you :cry:`)
 
       done()
     })
