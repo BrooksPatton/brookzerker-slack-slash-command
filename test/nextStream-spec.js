@@ -20,6 +20,24 @@ describe('next stream command', () => {
       done()
     })
   })
+
+  it('should give an error when not given a known command', (done) => {
+    const obj = createPayload()
+
+    obj.text = 'yo'
+    
+    api.post('/')
+    .send(obj)
+    .expect(200)
+    .end((err, res) => {
+      if(err) return done(err)
+
+      res.body.response_type.should.equal('ephemeral')
+      res.body.text.should.equal(`Sorry, I couldn'nt understand you :sad:`)
+
+      done()
+    })
+  })
 })
 
 function createPayload() {
