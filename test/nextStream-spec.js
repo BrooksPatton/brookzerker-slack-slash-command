@@ -25,7 +25,7 @@ describe('next stream command', () => {
     const obj = createPayload()
 
     obj.text = 'yo'
-    
+
     api.post('/')
     .send(obj)
     .expect(200)
@@ -33,7 +33,7 @@ describe('next stream command', () => {
       if(err) return done(err)
 
       res.body.response_type.should.equal('ephemeral')
-      res.body.text.should.equal(`Sorry, I couldn'nt understand you :sad:`)
+      res.body.text.should.equal(`Sorry, I couldn'nt understand you :cry:`)
 
       done()
     })
